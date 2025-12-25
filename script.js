@@ -49,7 +49,7 @@ document.querySelectorAll('.fade-in').forEach(element => {
 });
 
 // Typing effect for hero section
-const text = "Professional Developer and Data Analyst";
+const text = "DevOps Engineer and Data Analyst";
 const typingText = document.querySelector('.typing-text');
 let i = 0;
 
@@ -96,30 +96,30 @@ contactForm.addEventListener('submit', async (e) => {
 */
 
 document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  const submitBtn = this.querySelector('.submit-btn');
-  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-  submitBtn.disabled = true;
+    const submitBtn = this.querySelector('.submit-btn');
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
 
-  emailjs.sendForm("service_fpqs10z", "template_ssdn56r", this)
-    .then(() => {
-      submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-      submitBtn.style.backgroundColor = '#2ecc71';
-      submitBtn.style.boxShadow = '0 5px 15px rgba(46, 204, 113, 0.3)';
-      this.reset();
+    emailjs.sendForm("service_fpqs10z", "template_ssdn56r", this)
+        .then(() => {
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+            submitBtn.style.backgroundColor = '#2ecc71';
+            submitBtn.style.boxShadow = '0 5px 15px rgba(46, 204, 113, 0.3)';
+            this.reset();
 
-      setTimeout(() => {
-        submitBtn.innerHTML = 'Send Message';
-        submitBtn.style.backgroundColor = '';
-        submitBtn.style.boxShadow = '';
-        submitBtn.disabled = false;
-      }, 3000);
-    }, (error) => {
-      alert('Message failed to send:\n' + error.text);
-      submitBtn.innerHTML = 'Send Message';
-      submitBtn.disabled = false;
-    });
+            setTimeout(() => {
+                submitBtn.innerHTML = 'Send Message';
+                submitBtn.style.backgroundColor = '';
+                submitBtn.style.boxShadow = '';
+                submitBtn.disabled = false;
+            }, 3000);
+        }, (error) => {
+            alert('Message failed to send:\n' + error.text);
+            submitBtn.innerHTML = 'Send Message';
+            submitBtn.disabled = false;
+        });
     fetch('http://localhost:5000/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -159,9 +159,9 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Scroll Animation for Skills
-const skillCards = document.querySelectorAll('.skill-card');
+const skillCards = document.querySelectorAll('.skill-category');
 const skillObserverOptions = {
-    threshold: 0.5,
+    threshold: 0.2,
     rootMargin: '0px 0px -50px 0px'
 };
 
@@ -169,13 +169,17 @@ const skillObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            const progressBar = entry.target.querySelector('.progress');
-            const targetWidth = progressBar.style.width;
-            progressBar.style.width = '0';
-            setTimeout(() => {
-                progressBar.style.width = targetWidth;
-            }, 100);
+            entry.target.style.transform = 'translateY(0) rotateX(0deg)';
+
+            // Animate progress bars if they exist inside
+            const progressBars = entry.target.querySelectorAll('.skill-progress');
+            progressBars.forEach(bar => {
+                const targetWidth = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = targetWidth;
+                }, 100);
+            });
         }
     });
 }, skillObserverOptions);
@@ -183,7 +187,7 @@ const skillObserver = new IntersectionObserver((entries) => {
 skillCards.forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
-    card.style.transition = 'all 0.5s ease-out';
+    card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
     skillObserver.observe(card);
 });
 
@@ -191,14 +195,8 @@ skillCards.forEach(card => {
 const projectCards = document.querySelectorAll('.project-card');
 projectCards.forEach(card => {
     card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-10px)';
-        card.querySelector('img').style.transform = 'scale(1.05)';
-        card.style.boxShadow = '0 5px 20px rgba(218, 165, 32, 0.3)';
-    });
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0)';
-        card.querySelector('img').style.transform = 'scale(1)';
-        card.style.boxShadow = 'var(--shadow)';
+        // CSS handles hover effects mostly, but JS can add dynamic tilt or verify logic
+        // Ensuring CSS logic doesn't conflict
     });
 });
 
@@ -211,7 +209,7 @@ window.addEventListener('scroll', () => {
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 60) {
+        if (pageYOffset >= sectionTop - 100) {
             current = section.getAttribute('id');
         }
     });
@@ -228,28 +226,32 @@ window.addEventListener('scroll', () => {
 });
 
 // Navbar scroll effect
+// Navbar scroll effect
 const navbar = document.querySelector('nav');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-        navbar.style.backgroundColor = 'rgba(10, 25, 47, 0.95)';
-        navbar.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+        navbar.style.background = 'rgba(10, 25, 47, 0.85)'; // Semi-transparent when scrolled
+        navbar.style.backdropFilter = 'blur(15px)';
+        navbar.style.borderBottom = '1px solid rgba(100, 255, 218, 0.1)';
+        navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
     } else {
-        navbar.style.backgroundColor = 'rgba(10, 25, 47, 0.85)';
-        navbar.classList.remove('scrolled');
+        navbar.style.background = 'transparent'; // Completely transparent at top
+        navbar.style.backdropFilter = 'blur(0px)'; // Remove blur at top for clarity
+        navbar.style.borderBottom = '1px solid transparent';
+        navbar.style.boxShadow = 'none';
     }
 });
 
 // Scroll reveal animation
 const scrollReveal = () => {
     const elements = document.querySelectorAll('.fade-in');
-    
+
     elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
         const elementVisible = 150;
-        
+
         if (elementTop < window.innerHeight - elementVisible) {
             element.classList.add('visible');
-            element.style.boxShadow = '0 0 20px rgba(218, 165, 32, 0.2)';
         }
     });
 };
@@ -257,57 +259,31 @@ const scrollReveal = () => {
 window.addEventListener('scroll', scrollReveal);
 scrollReveal(); // Initial check
 
-// Add parallax effect to hero section
+// Parallax effect for hero section (subtle)
 window.addEventListener('scroll', () => {
     const hero = document.querySelector('.hero');
-    const scrolled = window.pageYOffset;
-    hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+    if (hero) {
+        const scrolled = window.pageYOffset;
+        hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+    }
 });
 
-// Add golden glow to skill cards on hover
-skillCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.boxShadow = '0 5px 20px rgba(218, 165, 32, 0.3)';
-    });
-    card.addEventListener('mouseleave', () => {
-        card.style.boxShadow = 'var(--shadow)';
-    });
-});
+// Read More Button Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.read-more-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent any default behavior
+            e.stopPropagation(); // Prevent card hover interference if any
 
-// Enhanced project card hover effect
-projectCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-10px)';
-        card.querySelector('img').style.transform = 'scale(1.05)';
-        card.style.boxShadow = '0 5px 20px rgba(218, 165, 32, 0.3)';
-    });
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0)';
-        card.querySelector('img').style.transform = 'scale(1)';
-        card.style.boxShadow = 'var(--shadow)';
-    });
-});
+            const description = button.previousElementSibling;
 
-// Enhanced form submission animation
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const submitBtn = contactForm.querySelector('.submit-btn');
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-    submitBtn.disabled = true;
-    submitBtn.style.background = 'var(--gradient)';
-
-    // Simulate form submission
-    setTimeout(() => {
-        submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-        submitBtn.style.backgroundColor = '#2ecc71';
-        submitBtn.style.boxShadow = '0 5px 15px rgba(46, 204, 113, 0.3)';
-        contactForm.reset();
-        
-        setTimeout(() => {
-            submitBtn.innerHTML = 'Send Message';
-            submitBtn.style.backgroundColor = '';
-            submitBtn.style.boxShadow = '';
-            submitBtn.disabled = false;
-        }, 2000);
-    }, 1500);
+            if (description.classList.contains('expanded')) {
+                description.classList.remove('expanded');
+                button.textContent = 'Read More';
+            } else {
+                description.classList.add('expanded');
+                button.textContent = 'Read Less';
+            }
+        });
+    });
 }); 
