@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,13 @@
     <link href="https://fonts.cdnfonts.com/css/bradley-hand-itc" rel="stylesheet">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-        (function() {
+        (function () {
             emailjs.init("yb1SQmR3SBa3qG-lE"); // this user ID is my public key from EmailJS
         })();
     </script>
 
 </head>
+
 <body>
     <div class="animated-background"></div>
     <!-- Navigation -->
@@ -41,7 +43,7 @@
         <div class="hero-content">
             <h1>Hi, I'm <span class="highlight">Mithlesh</span></h1>
             <h2>I'm a <span class="typing-text"></span></h2>
-            <p class="location">Based in India</p>
+            <p class="location">Based in Noida, India</p>
             <div class="hero-buttons">
                 <a href="#projects" class="cta-button">View My Work</a>
                 <a href="#contact" class="cta-button secondary">Let's Talk</a>
@@ -53,7 +55,9 @@
                 <div class="particle"></div>
                 <div class="particle"></div>
             </div>
-            <img src="Professional.jpg" alt="Mithlesh's Profile Picture">
+            <!-- <img src="Professional.jpg" alt="Mithlesh's Profile Picture"> -->
+            <img src="Picture.jpeg" alt="Mithlesh's Profile Picture">
+
         </div>
     </section>
 
@@ -62,33 +66,39 @@
         <h2>About</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>Hi, I'm <strong>Mithlesh Kumar</strong>. I'm a <strong>software engineer</strong>and <strong>data analyst</strong> passionate about creating innovative solutions. I enjoy learning new technologies and improving my skills every day.</p>
+                <p>Hi, I'm <strong>Mithlesh Kumar</strong>. I'm a <strong>DevOps engineer</strong> and <strong>data
+                        analyst</strong> passionate about creating innovative solutions. I enjoy learning new
+                    technologies and improving my skills every day.</p>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3><strong>Front</strong>end</h3>
+                        <h3>DevOps</h3>
+                        <p>Knowledge about Git, GitHub, Docker, Ansible, Jenkins, Kubernetes, Terraform and cloud
+                            platform Basically in AWS. Good communication with teammates.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
                         <p>Web application designer. Creative solutions and implementations.</p>
                     </div>
                     <div class="skill-category">
-                        <h3><strong>Data Analyst</strong></h3>
-                        <p>Skilled in extracting insights from complex data. Proficient in analysis, visualization, and turning data into actionable decisions.</p>
-                    </div>
-                    <div class="skill-category">
-                        <h3><strong>Back</strong>end</h3>
+                        <h3>Backend</h3>
                         <p>Database manager, micro-services and API developer.</p>
                     </div>
                     <div class="skill-category">
-                        <h3><strong>Machine Learning</strong></h3>
-                        <p>Designing intelligent systems using machine learning algorithms for predictive analysis and automation.</p>
+                        <h3>Data Analyst</h3>
+                        <p>Skilled in extracting insights from complex data. Proficient in analysis, visualization, and
+                            turning data into actionable decisions.</p>
                     </div>
+
                     <div class="skill-category">
-                        <h3>Team + Work</h3>
-                        <p>Knowledge of version control systems, CI/CD. Good communication with teammates.</p>
+                        <h3>Machine Learning</h3>
+                        <p>Designing intelligent systems using machine learning algorithms for predictive analysis and
+                            automation.</p>
                     </div>
                 </div>
             </div>
-            <div class="profile-image-container">
+            <!-- <div class="profile-image-container">
                 <img src="Mithlesh_4.jpg" alt="Profile Image" class="profile-image">
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -96,6 +106,57 @@
     <section id="skills" class="skills">
         <h2>My Skills</h2>
         <div class="skills-container">
+            <div class="skill-category tools">
+                <div class="skill-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>DevOps Tools & Technologies</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span class="skill-name">Git & GitHub</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Docker</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Ansible</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Jenkins</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Kubernetes</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">AWS</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Jupyter Notebook</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="skill-category frontend">
                 <div class="skill-icon">
                     <i class="fas fa-code"></i>
@@ -124,27 +185,6 @@
                         <span class="skill-name">React.js</span>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-category data analyst">
-                <div class="skill-icon">
-                    <i class="fas fa-github"></i>
-                </div>
-                <h3>Data Analysis and Machine Learning</h3>
-                <div class="skill-items">
-                    <div class="skill-item">
-                        <span class="skill-name">Data Analysis</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Machine learning</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 65%"></div>
                         </div>
                     </div>
                 </div>
@@ -182,35 +222,22 @@
                     </div>
                 </div>
             </div>
-
-            <div class="skill-category tools">
+            <div class="skill-category data analyst">
                 <div class="skill-icon">
-                    <i class="fas fa-tools"></i>
+                    <i class="fas fa-github"></i>
                 </div>
-                <h3>Tools & Technologies</h3>
+                <h3>Data Analysis and Machine Learning</h3>
                 <div class="skill-items">
                     <div class="skill-item">
-                        <span class="skill-name">Git & GitHub</span>
+                        <span class="skill-name">Data Analysis</span>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
+                            <div class="skill-progress" style="width: 90%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">AWS</span>
+                        <span class="skill-name">Machine learning</span>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 70%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Jupyter Notebook</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 70%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Docker</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 60%"></div>
+                            <div class="skill-progress" style="width: 65%"></div>
                         </div>
                     </div>
                 </div>
@@ -220,22 +247,47 @@
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
-        <h2>Experience</h2>
+        <h2>Achievements</h2>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <h3>Fullstack Developer</h3>
-                    <h4>Company Name</h4>
-                    <p>Fullstack developer, Angular, PHP, JAVA, Web Components</p>
+                    <h3>RESEARCH & COPYRIGHT</h3>
+                    <h4>Machine and Deep Learning-Based Smart Air Quality Monitoring System</h4>
+                    <p>
+                        <li>
+                            Authored and presented a research paper on smart air quality monitoring using Machine
+                            Learning and Deep Learning techniques.
+                        </li>
+                        <li>
+                            Paper accepted through a peer-review process at an IEEE-affiliated international conference
+                            on Communication and Intelligent Systems.
+                        </li>
+                        <li>
+                            Designed a data-driven system for real-time air quality analysis and prediction.
+                        </li>
+                    </p>
                     <span class="date">2024 - Present</span>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <h3>Senior Frontend Developer</h3>
-                    <h4>Company Name</h4>
-                    <p>Tech solutions, mono-repositories with Nx, Angular, Jest, Strapi CMS</p>
-                    <span class="date">2021 - 2024</span>
+                    <h3>DevOps Trainee</h3>
+                    <h4>Orbiqe Technology Pvt. Ltd.</h4>
+                    <p>
+                        <li>
+                            Worked with AWS cloud services including EC2, S3, IAM, and VPC to provision servers, manage
+                            storage, configure networking, and implement secure access controls.
+                        </li>
+                        <li>
+                            Implemented containerization and CI/CD workflows using Docker, Jenkins, and Git/GitHub to
+                            automate application build and deployment processes.
+                        </li>
+                        <li>
+                            Performed Linux server administration on Ubuntu, including package management, file
+                            permissions, system monitoring, and shell scripting.
+                        </li>
+                    </p>
+                    <span class="date">Sep-2025 - Present</span>
                 </div>
             </div>
             <!-- Add more experience items as needed -->
@@ -247,47 +299,76 @@
         <h2>Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <img src="Mithlesh_5.jpg" alt="Project 1">
+                <img src="Dashboard.png" alt="Project 1">
+                <div class="project-content">
+                    <h3> Smart Air Quality Monitoring System</h3>
+                    <p> 1} Integrated low-cost sensors with cloud platforms to enable real-time environmental data
+                        monitoring and visualization. <br>
+                        2} Trained and validated ML models using MAE, RMSE, and R² metrics for accurate AQI prediction.
+                        <br>
+                        3} Applied Random Forest regression to achieve high prediction reliability (R² is 0.97) on air
+                        quality data. <br>
+                        4} Used LSTM networks for time-series forecasting, capturing temporal pollution patterns
+                        effectively. <br>
+                        5} Performed data preprocessing and normalization on large air quality datasets for model
+                        optimization.
+                    </p>
+                    <!-- <div class="project-links">
+                        <a href="https://github.com/mithlesh17/Student-Alcohol-Consumption" class="project-link">View
+                            Project</a>
+                        <a href="https://github.com/mithlesh17" class="project-link">GitHub</a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="img1.png" alt="Project 1">
                 <div class="project-content">
                     <h3> Students Alcohol Consumption</h3>
-                    <p> 1} Conducted an in-depth analysis of student alcohol consumption patterns and their effects on academic performance, health, and
-                        social behaviors.
-                        2} Utilized Python for data preprocessing, visualization (using libraries such as Matplotlib and Seaborn), and machine learning.
-                        3} Implemented classification algorithms such as Logistic Regression and Decision Trees using scikit-learn to predict alcohol con
-                       sumption patterns based on family background, peer influence, and study habits.
-                        4} Leveraged insights to identify potential interventions to reduce adverse outcomes related to excessive alcohol use.
-                       5} Developed proficiency in data wrangling and machine learning workflows, enhancing skills in feature engineering, model evalua
-                       tion, and data storytelling.</p>
+                    <p> 1} Conducted an in-depth analysis of student alcohol consumption patterns and their effects on
+                        academic performance, health, and social behaviors. <br>
+                        2} Utilized Python for data preprocessing, visualization (using libraries such as Matplotlib and
+                        Seaborn), and machine learning. <br>
+                        3} Implemented classification algorithms such as Logistic Regression and Decision Trees using
+                        scikit-learn to predict alcohol consumption patterns based on family background, peer influence,
+                        and study habits. <br>
+                        4} Leveraged insights to identify potential interventions to reduce adverse outcomes related to
+                        excessive alcohol use. <br>
+                        5} Developed proficiency in data wrangling and machine learning workflows, enhancing skills in
+                        feature engineering, model evaluation, and data storytelling.</p>
                     <div class="project-links">
-                        <a href="https://github.com/mithlesh17/Student-Alcohol-Consumption" class="project-link">View Project</a>
+                        <a href="https://github.com/mithlesh17/Student-Alcohol-Consumption" class="project-link">View
+                            Project</a>
                         <a href="https://github.com/mithlesh17" class="project-link">GitHub</a>
                     </div>
                 </div>
             </div>
             <div class="project-card">
-                <img src="Mithlesh_1.jpg" alt="Project 2">
+                <img src="password-strength-checker.png" alt="Project 2">
                 <div class="project-content">
                     <h3> Password Strength Checker</h3>
-                    <p> 1} Utilized HTML for structuring the application, CSS for creating a responsive and visually appealing layout, and JavaScript for
-                        dynamic functionality.
-                        2} Incorporated a scoring algorithm to evaluate password strength based on length and character variety (numbers, uppercase, lower
-                       case, and special characters).
-                        3} Developed a dynamic feedback mechanism using a color-coded and animated strength bar to enhance user experience.
-                        4} Enhanced understanding of frontend technologies and gained experience in creating user-friendly, real-time web applications.</p>
+                    <p> 1} Utilized HTML for structuring the application, CSS for creating a responsive and visually
+                        appealing layout, and JavaScript for dynamic functionality. <br>
+                        2} Incorporated a scoring algorithm to evaluate password strength based on length and character
+                        variety (numbers, uppercase, lowercase, and special characters). <br>
+                        3} Developed a dynamic feedback mechanism using a color-coded and animated strength bar to
+                        enhance user experience. <br>
+                        4} Enhanced understanding of frontend technologies and gained experience in creating
+                        user-friendly, real-time web applications.</p>
                     <div class="project-links">
-                        <a href="https://github.com/mithlesh17/mithlesh17-Password-Strength-Checker" class="project-link">View Project</a>
+                        <a href="https://github.com/mithlesh17/mithlesh17-Password-Strength-Checker"
+                            class="project-link">View Project</a>
                         <a href="https://github.com/mithlesh17" class="project-link">GitHub</a>
                     </div>
                 </div>
             </div>
             <div class="project-card">
-                <img src="Mithlesh_2.jpg" alt="Project 3">
+                <img src="movie-web-app.jpg" alt="Project 3">
                 <div class="project-content">
                     <h3>Movie-Web-App</h3>
-                    <p> 1} This project involves building a movie app using React and The Movie DB API.
-                        2} The app includes features like movie search, display, filtering, rating, and reviews.
-                        3} I gained experience in working with third-party APIs, creating a responsive design, and implementing rating and review function
-                       ality.</p>
+                    <p> 1} This project involves building a movie app using React and The Movie DB API. <br>
+                        2} The app includes features like movie search, display, filtering, rating, and reviews. <br>
+                        3} I gained experience in working with third-party APIs, creating a responsive design, and
+                        implementing rating and review functionality.</p>
                     <div class="project-links">
                         <a href="https://github.com/mithlesh17/Movie-Web-App" class="project-link">View Project</a>
                         <a href="https://github.com/mithlesh17" class="project-link">GitHub</a>
@@ -304,8 +385,10 @@
             <div class="contact-info">
                 <div class="social-links">
                     <a href="https://github.com/mithlesh17" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/mithlesh-kumar-6613b4185/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/mr_mithlesh_g/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/mithlesh-kumar-6613b4185/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/mr_mithlesh_g/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
                 <p>Feel free to reach out for collaborations or just a friendly chat</p>
             </div>
@@ -326,4 +409,5 @@
 
     <script src="script.js"></script>
 </body>
-</html> 
+
+</html>
